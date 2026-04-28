@@ -30,8 +30,8 @@ export default function game_vote() {
 
   useEffect(() => {
     async function checkStatus() {
-      if (!window.ethereum) return;
-      const provider = new BrowserProvider(window.ethereum);
+      if (!(window as any).ethereum) return;
+      const provider = new BrowserProvider((window as any).ethereum);
       const contract = new Contract(CONTRACT_ADDRESS, ABI, provider);
       
       const open = await contract.pollOpen();
@@ -46,9 +46,9 @@ export default function game_vote() {
   }, [user, isLoaded]);
   
   async function vote(gameIndex: number) {
-    if (!window.ethereum) return;
+    if (!(window as any).ethereum) return;
     try {
-      const provider = new BrowserProvider(window.ethereum);
+      const provider = new BrowserProvider((window as any).ethereum);
       const signer = await provider.getSigner();
       const contract = new Contract(CONTRACT_ADDRESS, ABI, signer);
       const tx = await contract.vote(gameIndex);

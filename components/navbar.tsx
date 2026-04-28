@@ -19,8 +19,8 @@ const tabsBar = () => {
 	
 	useEffect(() => {
 		async function getBalance() {
-			if (!user?.primaryWeb3Wallet || !window.ethereum) return;
-			const provider = new BrowserProvider(window.ethereum);
+			if (!user?.primaryWeb3Wallet || !(window as any).ethereum) return;
+			const provider = new BrowserProvider((window as any).ethereum);
 			const bal = await provider.getBalance(user.primaryWeb3Wallet.web3Wallet);
 			setBalance(parseFloat(formatEther(bal)).toFixed(4));
 }
