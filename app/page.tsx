@@ -2,64 +2,27 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      <main className="flex flex-1 flex-col items-center justify-center px-4 pb-4 text-center">
+        <h1 className="font-black text-[50px] tracking-[-3px] text-black font-bold underline normal-case small-caps text-center mx-auto">
+          Who and What Should Rowan Play Today?
+        </h1>
+        <img src="/contact.png" alt="Contact Us" className="max-w-xs max-h-128 object-contain p-4 my-4" />
+        <p className="mt-3 text-2xl">
+          A web app to help me decide what to play when I have too many options. I play many games and many characters, but I hate having to choose which one 
+          to play! Now only here can you vote on what and who I should play! As exciting as this may be I have limited your options to only my favorites,
+          but don't fret as I will continue to add more games and characters as time goes on! 
+          I hope you enjoy voting and seeing the results as much as I will enjoy playing the winners!
+        </p>
+
+        <div className="flex flex-row gap-6 mt-8">
+          <img src="/r6-logo.png" alt="Placeholder 1" className="w-48 h-48 object-cover rounded-lg" />
+          <img src="/LoL-Symbol.png" alt="Placeholder 2" className="w-48 h-48 object-cover rounded-lg" />
+          <img src="/Apex-Legends-Logo.png" alt="Placeholder 3" className="h-48 object-cover rounded-lg" />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+        <p className="mt-3 text-2xl">
+          Above are some of the game options you can vote for! In order to do this you must be logged into your web3 wallet and have some tBNB to vote with!
+          You can login via clerk to your metamask wallet and then connect it to the app. 
+        </p>
       </main>
-    </div>
   );
 }

@@ -24,3 +24,52 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* navbar css */
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 20px;           
+}
+
+.nav-link {
+  text-decoration: none;
+  display: inline-block;
+}
+.nav-link:hover {
+  background-color: #d3d3d3;   
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 10px 20px;           
+  background-color: var(--background);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;      
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  background-color: #d3d3d3;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
